@@ -23,23 +23,24 @@ let rollDice (numOfDice:int) : DiceList * bool =
 
 
 // Ask user for their choice to Roll Again, Bank Points or roll all dice again if Hot Dice occurs
-let getChoice (scoreList:ScoreResult list) (rollTotal:int) (roundTotal:int) (diceCount:int) (player:Player) =
+let getChoice (scores:ScoreResults) (rollTotal:int) (roundTotal:int) (diceCount:int) (player:Player) =
     let mutable numOfScoringDice = 0
-    for score in scoreList do
+    // Get the number of dice that formed the score combinations
+    for score in scores do
         numOfScoringDice <- numOfScoringDice + 
             match score with
             | SetCombination (dice, _) -> List.length dice
             | RemainderCombination (dice, _) -> List.length dice
     
-    let mutable choice = Fail
+    let mutable choice = Fail // Default placeholder value
     
     // User has no choices if they fail to score
     if not (rollTotal = 0) then
         
-        // --- Display scoring dice, the roll total and the players round total ---
-        printfn "\n%d/%d dice scored. Scoring dice:\n" numOfScoringDice diceCount
+        // Display scoring dice, the roll total and the players round total
+        printfn $"\n%d{numOfScoringDice}/%d{diceCount} dice scored. Scoring dice:"
         let mutable count = 1
-        for score in scoreList do
+        for score in scores do
             match score with
             | RemainderCombination (x, y) -> printfn $"%d{count}) %A{x}, with a total of %d{remainderTotalToInt y}"
             | SetCombination (x, y) -> printfn $"%d{count}) %A{x}, with a total of %d{setTotalToInt y}"
@@ -86,12 +87,12 @@ let chooseRollAgainScores (scoreList:ScoreResult list) =
     while not valid do
 
         printf "> "
-        let choices = System.Console.ReadLine().Split [|' '|] |> Array.toList
+        let choices = System.Console.ReadLine().Split [|' '|] |> Array.toList // Unvalidated user input
         
         // Choice validator function
         let validateScoreChoice (value:String) =
             let (success, num) = System.Int32.TryParse(value)
-            if success && num > 0 && num <= (List.length scoreList) then num
+            if success && num > 0 && num <= (List.length scoreList) && List.length choices <= List.length scoreList then num
             else -1
 
         // Validate each individual choice
@@ -138,8 +139,7 @@ let displayGameOver (player:Player) =
     printfn " %s wins!" (fst player)
     printfn "--------------------------------"
     printfn "\n\n"
-
-
+  
 // Asks user to input the names of at least two players
 let getPlayers =
     let mutable keepAdding = true

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/david/newWork/Farkle/src/FarkleApp/FarkleApp.fsproj": {}
+    "/home/david/Farkle/src/FarkleApp/FarkleApp.fsproj": {}
   },
   "projects": {
-    "/home/david/newWork/Farkle/src/FarkleApp/FarkleApp.fsproj": {
+    "/home/david/Farkle/src/FarkleApp/FarkleApp.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/david/newWork/Farkle/src/FarkleApp/FarkleApp.fsproj",
+        "projectUniqueName": "/home/david/Farkle/src/FarkleApp/FarkleApp.fsproj",
         "projectName": "FarkleApp",
-        "projectPath": "/home/david/newWork/Farkle/src/FarkleApp/FarkleApp.fsproj",
+        "projectPath": "/home/david/Farkle/src/FarkleApp/FarkleApp.fsproj",
         "packagesPath": "/home/david/.nuget/packages/",
-        "outputPath": "/home/david/newWork/Farkle/src/FarkleApp/obj/",
+        "outputPath": "/home/david/Farkle/src/FarkleApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/david/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/home/david/newWork/Farkle/src/Library/Library.fsproj": {
-                "projectPath": "/home/david/newWork/Farkle/src/Library/Library.fsproj"
+              "/home/david/Farkle/src/Library/Library.fsproj": {
+                "projectPath": "/home/david/Farkle/src/Library/Library.fsproj"
               }
             }
           }
@@ -63,14 +63,14 @@
         }
       }
     },
-    "/home/david/newWork/Farkle/src/Library/Library.fsproj": {
+    "/home/david/Farkle/src/Library/Library.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/david/newWork/Farkle/src/Library/Library.fsproj",
+        "projectUniqueName": "/home/david/Farkle/src/Library/Library.fsproj",
         "projectName": "Library",
-        "projectPath": "/home/david/newWork/Farkle/src/Library/Library.fsproj",
+        "projectPath": "/home/david/Farkle/src/Library/Library.fsproj",
         "packagesPath": "/home/david/.nuget/packages/",
-        "outputPath": "/home/david/newWork/Farkle/src/Library/obj/",
+        "outputPath": "/home/david/Farkle/src/Library/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/david/.nuget/NuGet/NuGet.Config"

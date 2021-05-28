@@ -94,11 +94,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/david/newWork/Farkle/src/Library/Library.fsproj",
+      "projectUniqueName": "/home/david/Farkle/src/Library/Library.fsproj",
       "projectName": "Library",
-      "projectPath": "/home/david/newWork/Farkle/src/Library/Library.fsproj",
+      "projectPath": "/home/david/Farkle/src/Library/Library.fsproj",
       "packagesPath": "/home/david/.nuget/packages/",
-      "outputPath": "/home/david/newWork/Farkle/src/Library/obj/",
+      "outputPath": "/home/david/Farkle/src/Library/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/david/.nuget/NuGet/NuGet.Config"

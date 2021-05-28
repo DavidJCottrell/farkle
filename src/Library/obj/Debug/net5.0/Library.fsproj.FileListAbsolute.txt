@@ -8,3 +8,13 @@
 /home/david/newWork/Farkle/src/Library/obj/Debug/net5.0/Library.dll
 /home/david/newWork/Farkle/src/Library/obj/Debug/net5.0/Library.xml
 /home/david/newWork/Farkle/src/Library/obj/Debug/net5.0/Library.pdb
+/home/david/Farkle/src/Library/bin/Debug/net5.0/Library.deps.json
+/home/david/Farkle/src/Library/bin/Debug/net5.0/Library.dll
+/home/david/Farkle/src/Library/bin/Debug/net5.0/Library.pdb
+/home/david/Farkle/src/Library/bin/Debug/net5.0/Library.xml
+/home/david/Farkle/src/Library/obj/Debug/net5.0/Library.fsproj.AssemblyReference.cache
+/home/david/Farkle/src/Library/obj/Debug/net5.0/Library.AssemblyInfoInputs.cache
+/home/david/Farkle/src/Library/obj/Debug/net5.0/Library.AssemblyInfo.fs
+/home/david/Farkle/src/Library/obj/Debug/net5.0/Library.dll
+/home/david/Farkle/src/Library/obj/Debug/net5.0/Library.xml
+/home/david/Farkle/src/Library/obj/Debug/net5.0/Library.pdb

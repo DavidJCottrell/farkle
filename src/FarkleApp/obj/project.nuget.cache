@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ieXFbdIsU77/Xg8lRuPZV7CbwJckZMtNTHTO8WF/IGaoLc3E/8rdxyVJ0Xv8517V6M2xTKBrwSCaQoNI17W5bQ==",
+  "dgSpecHash": "nZF7KiYFN3vb04hY1XsQaj6nkIlQLQIHkKKtC6LiYdYxUApcAcgo+43mct7bvUMAszo+KjnOBxdB+9DUsQtNWw==",
   "success": true,
-  "projectFilePath": "/home/david/newWork/Farkle/src/FarkleApp/FarkleApp.fsproj",
+  "projectFilePath": "/home/david/Farkle/src/FarkleApp/FarkleApp.fsproj",
   "expectedPackageFiles": [
     "/home/david/.nuget/packages/fsharp.core/5.0.0/fsharp.core.5.0.0.nupkg.sha512"
   ],
