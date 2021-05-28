@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "CfWY0Oulh70pW7XbrWTVPoUnJ3NnWIYhwFIKTBeXyw5UmrvHf+QViJ4hPJFe/KUbjD+8eH6rd9/CV5a9EzkHeA==",
+  "success": true,
+  "projectFilePath": "/home/david/newWork/Farkle/src/Library/Library.fsproj",
+  "expectedPackageFiles": [
+    "/home/david/.nuget/packages/fsharp.core/5.0.0/fsharp.core.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
