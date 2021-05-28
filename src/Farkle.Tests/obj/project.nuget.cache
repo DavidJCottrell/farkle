@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Ya/U7MgUwUeQzuJ+p4iwYaE3IfErONqPl82AMkK2tG3UEimAcFZHqQRYgEeSbJW00NmRIc94Zd1Cd9x95BSIyA==",
+  "dgSpecHash": "Y1ggxFBxhqzCUvGJx5j79Xqm9aAvCwxbGWnk5Hx5ajRvK2XCcdDuZRJinVmxWTAd2zABMTlgcBSvnwr4Fhdf3w==",
   "success": true,
   "projectFilePath": "/home/david/Farkle/src/Farkle.Tests/Farkle.Tests.fsproj",
   "expectedPackageFiles": [
     "/home/david/.nuget/packages/coverlet.collector/1.3.0/coverlet.collector.1.3.0.nupkg.sha512",
     "/home/david/.nuget/packages/fscheck/2.15.3/fscheck.2.15.3.nupkg.sha512",
+    "/home/david/.nuget/packages/fscheck.xunit/2.15.3/fscheck.xunit.2.15.3.nupkg.sha512",
     "/home/david/.nuget/packages/fsharp.core/5.0.0/fsharp.core.5.0.0.nupkg.sha512",
     "/home/david/.nuget/packages/microsoft.codecoverage/16.7.1/microsoft.codecoverage.16.7.1.nupkg.sha512",
     "/home/david/.nuget/packages/microsoft.csharp/4.0.1/microsoft.csharp.4.0.1.nupkg.sha512",

@@ -236,3 +236,4 @@
 /home/david/Farkle/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.dll
 /home/david/Farkle/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.pdb
 /home/david/Farkle/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.genruntimeconfig.cache
+/home/david/Farkle/src/Farkle.Tests/bin/Debug/net5.0/FsCheck.Xunit.dll

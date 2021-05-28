@@ -11,6 +11,7 @@
           "FSharp.Core": "5.0.0",
           "FarkleApp": "1.0.0",
           "FsCheck": "2.15.3",
+          "FsCheck.Xunit": "2.15.3",
           "Library": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.7.1",
           "coverlet.collector": "1.3.0",
@@ -28,6 +29,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/FsCheck.dll": {
+            "assemblyVersion": "2.15.3.0",
+            "fileVersion": "2.15.3.0"
+          }
+        }
+      },
+      "FsCheck.Xunit/2.15.3": {
+        "dependencies": {
+          "FsCheck": "2.15.3",
+          "xunit.extensibility.execution": "2.4.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FsCheck.Xunit.dll": {
             "assemblyVersion": "2.15.3.0",
             "fileVersion": "2.15.3.0"
           }
@@ -1189,6 +1202,13 @@
       "sha512": "sha512-1y2AMNIns9NZeHx/R/wWUAuFAP8+SpbMI76uW+GaD36MZvbSuEA6H3vYsLFUUbZB8+prG9xtQyDA4oDl80Z93g==",
       "path": "fscheck/2.15.3",
       "hashPath": "fscheck.2.15.3.nupkg.sha512"
+    },
+    "FsCheck.Xunit/2.15.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-94X4ZQSlM9gP3LuckU+OxSwwOsn343Plpj7dQFkW60hWC8486JWE0djhbWIU3P7+wZsCVmYVJJ81MYqRdKvF0w==",
+      "path": "fscheck.xunit/2.15.3",
+      "hashPath": "fscheck.xunit.2.15.3.nupkg.sha512"
     },
     "FSharp.Core/5.0.0": {
       "type": "package",

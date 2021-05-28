@@ -30,6 +30,7 @@
     <PkgMicrosoft_NET_Test_Sdk Condition=" '$(PkgMicrosoft_NET_Test_Sdk)' == '' ">/home/david/.nuget/packages/microsoft.net.test.sdk/16.7.1</PkgMicrosoft_NET_Test_Sdk>
     <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">/home/david/.nuget/packages/fsharp.core/5.0.0</PkgFSharp_Core>
     <PkgFsCheck Condition=" '$(PkgFsCheck)' == '' ">/home/david/.nuget/packages/fscheck/2.15.3</PkgFsCheck>
+    <PkgFsCheck_Xunit Condition=" '$(PkgFsCheck_Xunit)' == '' ">/home/david/.nuget/packages/fscheck.xunit/2.15.3</PkgFsCheck_Xunit>
     <Pkgcoverlet_collector Condition=" '$(Pkgcoverlet_collector)' == '' ">/home/david/.nuget/packages/coverlet.collector/1.3.0</Pkgcoverlet_collector>
   </PropertyGroup>
 </Project>
