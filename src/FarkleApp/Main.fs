@@ -32,11 +32,7 @@ let main _ =
                 printfn $"- Current player: %s{fst players.[i]} -"
 
                 // Roll some number of random dice
-                let rollResult = rollDice diceCount
-                
-                // If an invalid number of dice occurs
-                if snd rollResult = false then failwith "Invalid number of dice thrown."
-                let roll = fst rollResult // Get the valid dice list
+                let roll = rollDice diceCount
                 
                 printfn $"\n%s{fst players.[i]} rolled %A{diceCount} dice: %A{roll}"
                 

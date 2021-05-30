@@ -15,11 +15,9 @@ type Choice =
     | Fail
 
 // Returns a given amount of random numbers (Dice)
-let rollDice (numOfDice:int) : DiceList * bool =
-    if numOfDice > 6 || numOfDice < 1 then ([], false)
-    else
-        let rand = Random()
-        (List.init numOfDice (fun _ -> Dice (rand.Next (1, 7))), true)
+let rollDice (numOfDice:int) : DiceList = 
+    let rand = Random()
+    List.init numOfDice (fun _ -> Dice (rand.Next (1, 7)))
 
 
 // Ask user for their choice to Roll Again, Bank Points or roll all dice again if Hot Dice occurs
@@ -159,7 +157,7 @@ let getPlayers =
     players
 
 // (newDiceCount, newRoundTotal)
-let rollAgain scoreResults diceCount roundTotal =
+let rollAgain (scoreResults:ScoreResults) diceCount roundTotal =
     let mutable newDiceCount = diceCount
     let mutable newRoundTotal = roundTotal
     // Ask user to choose the dice they want to keep
