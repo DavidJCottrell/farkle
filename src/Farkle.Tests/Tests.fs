@@ -24,13 +24,20 @@ let expectedPossibleRemainders:ScoreResults = [
 ]
 
 // [<Fact>]
-// let ``A DiceList should never have more than n sets`` (roll:DiceList) = 
+// let ``A DiceList should never have more than (n - (n % 3)) / 3 sets`` (roll:DiceList) = 
 //     let len = List.length roll
 //     (len - (len % 3)) / 3
 
 
 [<Property>]
-let ``A DiceList should never have more than n sets`` (roll:DiceList) = 
+let ``A DiceList should never have more than (n - (n % 3)) / 3 sets`` (roll:DiceList) = 
+    let scoreResults = scoreRoll roll
+    let mutable numOfSets = 0
+    for score in scoreResults do
+        match score with
+        | SetCombination _ -> numOfSets <- numOfSets + 1
+        | _ -> numOfSets <- numOfSets + 1
+
     let len = List.length roll
     (len - (len % 3)) / 3
 
@@ -38,7 +45,7 @@ let ``A DiceList should never have more than n sets`` (roll:DiceList) =
 let ``test that the maximum number of sets for a given DiceList are never exceeded`` () = 
     let property num =
         //roll some number of dice and check against property
-        rollDice num |> ``A DiceList should never have more than (len - (len % 3)) / 3 sets``
+        rollDice num |> ``A DiceList should never have more than (n - (n % 3)) / 3 sets``
     
     Check.QuickThrowOnFailure property
 
@@ -68,7 +75,6 @@ let ``test that the maximum number of sets for a given DiceList are never exceed
 //     printfn "%A" set
     
 //     //let setDice = (fst set)
-
 
     
 //     true

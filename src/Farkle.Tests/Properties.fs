@@ -8,14 +8,14 @@ open System
 
 // --- DiceList properties ---
 
-let myFunc num =
-    num + 1
+// let myFunc num =
+//     num + 1
 
-let myFuncThatUsesMyFunc num =
-    myFunc num = num + 1
+// let myFuncThatUsesMyFunc num =
+//     myFunc num = num + 1
 
-let testRollDice numOfDice =
-    snd (rollDice numOfDice)
+// let testRollDice numOfDice =
+//     snd (rollDice numOfDice)
 
 // A given DiceList should never exceed 6 dice
 // let lessThan6DiceProperty (diceList:DiceList) =
