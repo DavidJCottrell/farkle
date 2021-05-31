@@ -12,7 +12,7 @@ type Choice =
     | BankPoints
     | RollAgain
     | RollAllAgain
-    | Fail
+
 
 // Returns a given amount of random numbers (Dice)
 let rollDice (numOfDice:int) : DiceList = 
@@ -20,61 +20,62 @@ let rollDice (numOfDice:int) : DiceList =
     List.init numOfDice (fun _ -> Dice (rand.Next (1, 7)))
 
 
-// Ask user for their choice to Roll Again, Bank Points or roll all dice again if Hot Dice occurs
-let getChoice (scores:ScoreResults) (rollTotal:int) (roundTotal:int) (diceCount:int) (player:Player) =
+let getNumOfScoringDice (scoringDice:ScoreResults) =
     let mutable numOfScoringDice = 0
     // Get the number of dice that formed the score combinations
-    for score in scores do
+    for score in scoringDice do
         numOfScoringDice <- numOfScoringDice + 
             match score with
             | SetCombination (dice, _) -> List.length dice
             | RemainderCombination (dice, _) -> List.length dice
-    
-    let mutable choice = Fail // Default placeholder value
-    
-    // User has no choices if they fail to score
-    if not (rollTotal = 0) then
-        
-        // Display scoring dice, the roll total and the players round total
-        printfn $"\n%d{numOfScoringDice}/%d{diceCount} dice scored. Scoring dice:"
-        let mutable count = 1
-        for score in scores do
-            match score with
-            | RemainderCombination (x, y) -> printfn $"%d{count}) %A{x}, with a total of %d{remainderTotalToInt y}"
-            | SetCombination (x, y) -> printfn $"%d{count}) %A{x}, with a total of %d{setTotalToInt y}"
-            count <- count + 1
-        printfn $"\n- Current roll total: %d{rollTotal}"
-        printfn $"- Current round total: %d{roundTotal}"
-        printfn $"- Your total score (%d{snd player}) + round total + roll total = %d{roundTotal + rollTotal + snd player}\n"
+    numOfScoringDice
 
-        // --- Display options for if the user scored AND get their choice ---
-        let mutable validChoice = false 
-        while not validChoice do
-            
-            let validateChoice (success, choiceInt) (choice1:Choice) (choice2:Choice) =
-                match success, choiceInt with
-                | true, 1 -> 
-                    choice <- choice1
-                    validChoice <- true
-                | true, 2 -> 
-                    choice <- choice2
-                    validChoice <- true
-                | _, _ -> printfn "Invalid input, please try again."
 
-            // --- Hot dice options ---
-            if numOfScoringDice = diceCount then
-                printfn "Hot Dice!"
-                printfn "Would you like to bank your points (1) or roll all 6 dice again? (2)"
-                printf "> "
-                validateChoice (System.Int32.TryParse(System.Console.ReadLine())) BankPoints RollAllAgain
-            
-            // --- Normal scoring options ---
-            else
-                printfn "Would you like to bank your points (1) or roll again? (2)"
-                printf "> "
-                validateChoice (System.Int32.TryParse(System.Console.ReadLine())) BankPoints RollAgain
+let displayScores scoringDice diceCount rollTotal =
+    let numOfScoringDice = getNumOfScoringDice scoringDice
+    // Display scoring dice and the roll total with option numbers
+    printfn $"\n%d{numOfScoringDice}/%d{diceCount} dice scored. Scoring dice:"
+    let mutable count = 1
+    for score in scoringDice do
+        match score with
+        | RemainderCombination (x, y) -> printfn $"%d{count}) %A{x}, with a total of %d{remainderTotalToInt y}"
+        | SetCombination (x, y) -> printfn $"%d{count}) %A{x}, with a total of %d{setTotalToInt y}"
+        count <- count + 1
+    printfn $"\n- Current roll total: %d{rollTotal}"
+
+
+// Ask user for their choice to Roll Again, Bank Points or roll all dice again if Hot Dice occurs
+let getChoice (scoringDice:ScoreResults) (diceCount:int) : Choice=
+
+    let numOfScoringDice = getNumOfScoringDice scoringDice
+    
+    let rollChoice = 
+        if numOfScoringDice = diceCount then RollAgain
+        else RollAgain
+
+    if numOfScoringDice = diceCount then
+        printfn "Would you like to bank your points (1) or roll all 6 dice again? (2)"
+        printf "> "
+    else
+        printfn "Would you like to bank your points (1) or roll again? (2)"
+        printf "> "
+
+    let mutable validChoice = false
+    let mutable choice = Unchecked.defaultof<Choice>
+
+    while not validChoice do
+        let success, choiceInt = System.Int32.TryParse(System.Console.ReadLine())
+        match success, choiceInt with
+        | true, 1 ->
+            choice <- BankPoints
+            validChoice <- true
+        | true, 2 -> 
+            choice <- rollChoice
+            validChoice <- true
+        | _, _ -> printfn "Invalid input, please try again."
+    
     choice
-
+    
 
 // Allows the user to choose which dice they want to keep if they choose to re-roll
 let chooseRollAgainScores (scoreList:ScoreResult list) =
@@ -138,8 +139,9 @@ let displayGameOver (player:Player) =
     printfn "--------------------------------"
     printfn "\n\n"
   
+  
 // Asks user to input the names of at least two players
-let getPlayers =
+let getPlayers : Players =
     let mutable keepAdding = true
     let mutable players = []
     printfn "- Add players -"
@@ -156,7 +158,7 @@ let getPlayers =
             if not (name = "") then players <- players @ [(name, 0)]
     players
 
-// (newDiceCount, newRoundTotal)
+
 let rollAgain (scoreResults:ScoreResults) diceCount roundTotal =
     let mutable newDiceCount = diceCount
     let mutable newRoundTotal = roundTotal
@@ -180,6 +182,7 @@ let rollAgain (scoreResults:ScoreResults) diceCount roundTotal =
             newDiceCount <- newDiceCount - List.length dice
             newRoundTotal <- newRoundTotal + remainderTotalToInt total
     (newDiceCount, newRoundTotal)
+
 
 // Updates the current player's score within the list of players with their new total score
 let bankPoints (players:Players) (roundTotal:int) (playerIndex:int) : Players =

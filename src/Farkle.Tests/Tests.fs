@@ -7,31 +7,43 @@ open FsCheck.Xunit
 open ScoringLibrary
 open GameLibrary
 
-let possibleSets = [
-    ([Dice 1; Dice 1; Dice 1], 300);
-    ([Dice 2; Dice 2; Dice 2], 200);
-    ([Dice 3; Dice 3; Dice 3], 300);
-    ([Dice 4; Dice 4; Dice 4], 400);
-    ([Dice 5; Dice 5; Dice 5], 500);
-    ([Dice 6; Dice 6; Dice 6], 600);
+let expectedPossibleSets:ScoreResults = [
+    SetCombination ([Dice 1; Dice 1; Dice 1], SetTotal 300);
+    SetCombination ([Dice 2; Dice 2; Dice 2], SetTotal 200);
+    SetCombination ([Dice 3; Dice 3; Dice 3], SetTotal 300);
+    SetCombination ([Dice 4; Dice 4; Dice 4], SetTotal 400);
+    SetCombination ([Dice 5; Dice 5; Dice 5], SetTotal 500);
+    SetCombination ([Dice 6; Dice 6; Dice 6], SetTotal 600);
 ]
 
-let possibleRemainders = [
-    ([Dice 1], 100);
-    ([Dice 5], 50);
-    ([Dice 1; Dice 1], 200);
-    ([Dice 5; Dice 5], 100);
+let expectedPossibleRemainders:ScoreResults = [
+    RemainderCombination ([Dice 1], RemainderTotal 100);
+    RemainderCombination ([Dice 5], RemainderTotal 50);
+    RemainderCombination ([Dice 1; Dice 1], RemainderTotal 200);
+    RemainderCombination ([Dice 5; Dice 5], RemainderTotal 100);
 ]
+
+// [<Fact>]
+// let ``A DiceList should never have more than n sets`` (roll:DiceList) = 
+//     let len = List.length roll
+//     (len - (len % 3)) / 3
+
+
+[<Property>]
+let ``A DiceList should never have more than n sets`` (roll:DiceList) = 
+    let len = List.length roll
+    (len - (len % 3)) / 3
 
 [<Fact>]
-let ``My test`` () = 
-    for set in possibleSets do
-        let expected = SetCombination (fst set, SetTotal (snd set))
-        let actual = (scoreRoll (fst set)).[0]
-        printfn "Expected: %A, actual: %A" expected actual
-        Assert.Equal(expected, actual)
+let ``test that the maximum number of sets for a given DiceList are never exceeded`` () = 
+    let property num =
+        //roll some number of dice and check against property
+        rollDice num |> ``A DiceList should never have more than (len - (len % 3)) / 3 sets``
+    
+    Check.QuickThrowOnFailure property
 
-``My test`` ()
+
+
 
 // Check.Verbose ``My test``
 
