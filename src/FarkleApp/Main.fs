@@ -37,25 +37,35 @@ let main _ =
                 printfn $"\n%s{fst players.[i]} rolled %A{diceCount} dice: %A{roll}"
                 
                 // Get set and remainder score combinations from the roll
-                let scoreResults:ScoreResults = scoreRoll roll
-                let rollTotal = calcTotalScore scoreResults
+                let diceScores:ScoreResults = scoreRoll roll
+                let rollTotal = calcTotalScore diceScores
 
-                // If the current player has achieved the winning amount (won the game)
                 let hasWon = (snd players.[i] + roundTotal + rollTotal) >= winningScore
 
+                // If the current player has achieved the winning amount (won the game)
                 if hasWon then
                     displayGameOver players.[i]
                     turnOver <- true
                     gameOver <- true
+                // If they failed to score any points in the current roll
+                else if rollTotal = 0 then
+                    System.Console.Clear()
+                    printfn $"-%s{fst players.[i]} was farkled!-"
+                    roundTotal <- 0
+                    turnOver <- true
                 else
+                    printfn $"- Current round total: %d{roundTotal}"
+
+                    // Display the scores for the dice they roll
+                    displayScores diceScores diceCount rollTotal
                     
                     // Show the available choices based on the score from the roll
-                    let choice = getChoice scoreResults rollTotal roundTotal diceCount players.[i]
+                    let choice = getChoice diceScores diceCount
 
-                    // ---- Act on chosen choice (or fail) ----
+                    // ---- Act on chosen choice ----
                     match choice with
                     | RollAgain -> 
-                        let (newDiceCount, newRoundTotal) = rollAgain scoreResults diceCount roundTotal
+                        let (newDiceCount, newRoundTotal) = rollAgain diceScores diceCount roundTotal
                         diceCount <- newDiceCount
                         roundTotal <- newRoundTotal
                     | BankPoints ->
@@ -63,10 +73,7 @@ let main _ =
                         players <- bankPoints players roundTotal i
                         turnOver <- true
                     | RollAllAgain -> 
+                        System.Console.Clear()
                         roundTotal <- roundTotal + rollTotal
                         diceCount <- 6 // All dice can be re-rolled on Hot Dice
-                    | Fail ->
-                        printfn $"-%s{fst players.[i]} was farkled!-"
-                        roundTotal <- 0
-                        turnOver <- true
     0
