@@ -91,21 +91,20 @@ let chooseRollAgainScores (scoreList:ScoreResult list) =
         // Choice validator function
         let validateScoreChoice (value:String) =
             let (success, num) = System.Int32.TryParse(value)
-            if success && num > 0 && num <= (List.length scoreList) && List.length choices <= List.length scoreList then num
+            if success && num > 0 && num <= (List.length scoreList) &&
+               List.length choices <= List.length scoreList then num
             else -1
 
         // Validate each individual choice
         parsedChoices <- List.map (fun choice -> validateScoreChoice choice) choices
         
-        // If any of the choices were invalid
         if List.exists ((=) -1) parsedChoices then printfn "Invalid input, please try again."
         else valid <- true
-
+    
     let mutable chosenScores = []
-    for choice in parsedChoices do
+    for choice in Set(parsedChoices) do
         // Get the chosen scores from the list of choices
         chosenScores <- chosenScores @ [scoreList.[choice - 1]]
-    
     System.Console.Clear()
     chosenScores
 

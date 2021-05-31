@@ -7,13 +7,18 @@
   <component name="ChangeListManager">
     <list default="true" id="5e87e2b9-c844-4628-9ca9-0949e1cb20aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Farkle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Farkle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/Helpers.fs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/Helpers.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/Tests.fs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/Tests.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.fsproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.fsproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.fsproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.fsproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FarkleApp/bin/Debug/net5.0/Library.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/bin/Debug/net5.0/Library.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FarkleApp/bin/Debug/net5.0/Library.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/bin/Debug/net5.0/Library.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FarkleApp/obj/Debug/net5.0/FarkleApp.fsproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/obj/Debug/net5.0/FarkleApp.fsproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FarkleApp/obj/Debug/net5.0/FarkleApp.fsproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/obj/Debug/net5.0/FarkleApp.fsproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/GameLibrary.fs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/GameLibrary.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/bin/Debug/net5.0/Library.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/bin/Debug/net5.0/Library.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/bin/Debug/net5.0/Library.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/bin/Debug/net5.0/Library.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/obj/Debug/net5.0/Library.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/obj/Debug/net5.0/Library.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library/obj/Debug/net5.0/Library.fsproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/obj/Debug/net5.0/Library.fsproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/obj/Debug/net5.0/Library.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/obj/Debug/net5.0/Library.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,17 +41,21 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/src/Library/GameLibrary.fs" />
       <option value="$PROJECT_DIR$/src/Farkle.Tests/Helpers.fs" />
       <option value="$PROJECT_DIR$/src/Farkle.Tests/Tests.fs" />
+      <option value="$PROJECT_DIR$/src/Library/GameLibrary.fs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1tIv3Rz1KNu2PItPThn5RcjksGp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -102,7 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622469222258</updated>
       <workItem from="1622469231624" duration="14000" />
-      <workItem from="1622469275012" duration="9809000" />
+      <workItem from="1622469275012" duration="13705000" />
     </task>
     <servers />
   </component>
@@ -124,6 +133,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
