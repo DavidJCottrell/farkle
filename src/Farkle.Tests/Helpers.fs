@@ -24,8 +24,8 @@ let expectedPossibleRemainders:ScoreResults = [
     RemainderCombination ([Dice 5; Dice 5], RemainderTotal 100);
 ]
 
-
-let generateRandomRollWith1Remainder (diceForRemainder:Dice) =
+(*
+let generateRollWithOnlyOneRemainderCombination =
     let rand = Random()
     let mutable valid = false
     let mutable randomDice = []
@@ -41,7 +41,26 @@ let generateRandomRollWith1Remainder (diceForRemainder:Dice) =
         if countOccurrences diceForRemainder randomDice = 0 then valid <- true
     Gen.shuffle [diceForRemainder; randomDice.[0]; randomDice.[1]; randomDice.[2]; randomDice.[3]; randomDice.[4]] |> Gen.sample 0 6
 
-let generateRandomRollWith2Remainders (diceForRemainder:Dice) =
+*)
+
+let generateRollWithOneRemainderForDice (diceForRemainder:Dice) =
+    let rand = Random()
+    let mutable valid = false
+    let mutable randomDice = []
+    
+    while not valid do
+        randomDice <- [
+            Dice (rand.Next (1, 7))
+            Dice (rand.Next (1, 7))
+            Dice (rand.Next (1, 7))
+            Dice (rand.Next (1, 7))
+            Dice (rand.Next (1, 7))
+        ]
+        if countOccurrences diceForRemainder randomDice = 0 then
+            valid <- true
+    Gen.shuffle [diceForRemainder; randomDice.[0]; randomDice.[1]; randomDice.[2]; randomDice.[3]; randomDice.[4]] |> Gen.sample 0 6
+
+let generateRollWithTwoRemaindersForDice (diceForRemainder:Dice) =
     let rand = Random()
     let mutable valid = false
     let mutable randomDice = []
@@ -58,7 +77,7 @@ let generateRandomRollWith2Remainders (diceForRemainder:Dice) =
     Gen.shuffle diceList
     |> Gen.sample 0 6
     
-let generateRandomRollWith1Set (diceForSet:Dice) =
+let generateRollWithOneSetForDice (diceForSet:Dice) =
     let rand = Random()
     let mutable valid = false
     let mutable randomDice = []
