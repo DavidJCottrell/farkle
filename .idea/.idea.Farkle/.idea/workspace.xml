@@ -7,13 +7,20 @@
   <component name="ChangeListManager">
     <list default="true" id="5e87e2b9-c844-4628-9ca9-0949e1cb20aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Farkle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Farkle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/Helpers.fs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/Helpers.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/Tests.fs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/Tests.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Farkle.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Farkle.Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Farkle.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Farkle.Tests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Library.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Library.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Library.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Library.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.fsproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.fsproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.fsproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.fsproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FarkleApp/bin/Debug/net5.0/Library.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/bin/Debug/net5.0/Library.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FarkleApp/bin/Debug/net5.0/Library.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/bin/Debug/net5.0/Library.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FarkleApp/obj/Debug/net5.0/FarkleApp.fsproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/obj/Debug/net5.0/FarkleApp.fsproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FarkleApp/obj/Debug/net5.0/FarkleApp.fsproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/obj/Debug/net5.0/FarkleApp.fsproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Library/GameLibrary.fs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/GameLibrary.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library/bin/Debug/net5.0/Library.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/bin/Debug/net5.0/Library.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library/bin/Debug/net5.0/Library.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/bin/Debug/net5.0/Library.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library/obj/Debug/net5.0/Library.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/obj/Debug/net5.0/Library.dll" afterDir="false" />
@@ -42,8 +49,8 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/src/Farkle.Tests/Helpers.fs" />
-      <option value="$PROJECT_DIR$/src/Farkle.Tests/Tests.fs" />
       <option value="$PROJECT_DIR$/src/Library/GameLibrary.fs" />
+      <option value="$PROJECT_DIR$/src/Farkle.Tests/Tests.fs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1tIv3Rz1KNu2PItPThn5RcjksGp" />
@@ -112,6 +119,7 @@
       <updated>1622469222258</updated>
       <workItem from="1622469231624" duration="14000" />
       <workItem from="1622469275012" duration="13705000" />
+      <workItem from="1622743426072" duration="2928000" />
     </task>
     <servers />
   </component>

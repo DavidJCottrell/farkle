@@ -3,7 +3,6 @@ module Tests
 open Xunit
 open FsCheck
 open FsCheck.Xunit
-open System
 open Helpers
 
 open ScoringLibrary
@@ -24,6 +23,8 @@ let ``A DiceList should never have more than (n - (n % 3)) / 3 sets`` (roll:Dice
     
     numOfSets <= ((n - (n % 3)) / 3)
 
+
+
 [<Fact>]
 let ``test that the maximum number of sets for a given DiceList are never exceeded`` () =
     let property num =
@@ -33,30 +34,36 @@ let ``test that the maximum number of sets for a given DiceList are never exceed
 
 [<Fact>]
 let ``test that a SetCombination is returned by scoreRoll when given a DiceList with one set`` () =
-    // For each dice type
     for i in [1..6] do
-        let total = if i = 1 then 300 else i * 100 // Get the total that dice will take as a set
-        let generatedRolls = generateRollWithOneSetForDice (Dice i) // Get a list of dice containing a set for that dice and some random other numbers
-        let expected = SetCombination([Dice i; Dice i; Dice i], SetTotal total) // Build the SetCombination the actual value should equate to
+        let expectedTotal = if i = 1 then SetTotal 300 else SetTotal (i * 100)
+        let expectedDice = [Dice i; Dice i; Dice i]
+        let expectedSet = SetCombination(expectedDice, expectedTotal)
+        
+        // Get a list of dice containing a set for that dice and some random other numbers
+        let generatedRolls = generateRollWithOneSetForDice (Dice i)
+        
         // GeneratedSets is a list of 6 combinations for the given dice
         for roll in generatedRolls do
-            let actualScores = scoreRoll (roll |> List.ofArray) // Score that generated DiceList
+            let actualScores = scoreRoll (roll |> List.ofArray)
+            
             // Find the SetCombination from the resulting ScoreResults
             let actualSet = List.find (fun score ->
                     match score with
                     | SetCombination (_) -> true
                     | _ -> false) actualScores
-            // printfn $"Checking expected %A{expected} against actual  %A{actualSet}"
-            // Check it is equal to the expected
-            Assert.Equal(expected, actualSet)
+            
+            Assert.Equal(expectedSet, actualSet)
 
 [<Fact>]
 let ``test that scoreRoll returns one RemainderCombination for the dice provided`` () =
-    let remainderOptions = [Dice 1; Dice 5]
-    for i in remainderOptions do
-        let total = if i = Dice 1 then 100 else 50
+    let remainderPossibilities = [Dice 1; Dice 5]
+    for i in remainderPossibilities do
+        
+        let expectedTotal = if i = Dice 1 then RemainderTotal 100 else RemainderTotal 50
+        let expectedRemainder = RemainderCombination([i], expectedTotal)
+        
         let generatedRolls = generateRollWithOneRemainderForDice i
-        let expected = RemainderCombination([i], RemainderTotal total)
+        
         for roll in generatedRolls do
             let actualScores = scoreRoll (roll |> List.ofArray)
             let actualRemainder =
@@ -64,5 +71,17 @@ let ``test that scoreRoll returns one RemainderCombination for the dice provided
                         match score with
                         | RemainderCombination ([Dice i], _) -> true
                         | _ -> false) actualScores
-            //printfn $"Checking expected %A{expected} against actual  %A{actualRemainder}"
-            Assert.Equal(expected, actualRemainder)
+                    
+            Assert.Equal(expectedRemainder, actualRemainder)
+
+
+// -- Current complete tests --
+// - making sure the max number of sets are never exceeded
+// - making sure that a SetCombination is actually returned when you expect it to be
+// - making sure that a RemainderCombination is actually returned when you expect it to be
+
+// -- Tests yet to be complete --
+// - 
+
+
+

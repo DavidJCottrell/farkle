@@ -89,3 +89,5 @@ let generateRollWithOneSetForDice (diceForSet:Dice) =
     
     Gen.shuffle [diceForSet; diceForSet; diceForSet; randomDice.[0]; randomDice.[1]; randomDice.[2]] |> Gen.sample 0 6
 
+
+
