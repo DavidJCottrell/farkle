@@ -71,45 +71,4 @@ let ``test for correct RemainderCombination`` () =
                         match score with
                         | RemainderCombination ([expectedDice], expectedTotal) -> true
                         | _ -> false) actualScores 
-            Assert.Equal(expectedRemainder, actualRemainder)
-
-[<Fact>]
-let ``test for correct RemainderCombination and SetCombination`` () =
-    let testRolls = [
-        [Dice 1; Dice 2; Dice 1; Dice 3; Dice 3; Dice 4]
-        [Dice 5; Dice 1; Dice 5; Dice 4; Dice 4; Dice 4]
-        [Dice 6; Dice 6; Dice 6; Dice 6; Dice 6; Dice 6]
-        [Dice 5; Dice 4; Dice 1; Dice 2; Dice 1; Dice 1]
-        [Dice 3; Dice 1; Dice 3; Dice 3; Dice 3; Dice 3]
-        [Dice 2; Dice 2; Dice 2; Dice 6; Dice 5; Dice 5]
-    ]
-    
-    let expectedResults = [
-        [
-            RemainderCombination([Dice 1; Dice 1], RemainderTotal 200)
-        ];
-        [
-            RemainderCombination([Dice 1], RemainderTotal 100)
-            SetCombination([Dice 4; Dice 4; Dice 4], SetTotal 400)
-            RemainderCombination([Dice 5; Dice 5], RemainderTotal 100)
-        ];
-        [
-            SetCombination([Dice 6; Dice 6; Dice 6], SetTotal 600);
-            SetCombination([Dice 6; Dice 6; Dice 6], SetTotal 600)
-        ]
-        [
-            SetCombination([Dice 1; Dice 1; Dice 1], SetTotal 300)
-            RemainderCombination([Dice 5], RemainderTotal 50)
-        ]
-        [
-            RemainderCombination([Dice 1], RemainderTotal 100)
-            SetCombination([Dice 3; Dice 3; Dice 3], SetTotal 300)
-        ]
-        [
-            SetCombination([Dice 2; Dice 2; Dice 2], SetTotal 200);
-            RemainderCombination([Dice 5; Dice 5], RemainderTotal 100)
-        ]
-    ]
-    
-    for i in [0..(testRolls.Length - 1)] do
-        Assert.True(expectedResults.[i] = (scoreRoll testRolls.[i]))
+            Assert.Equal(expectedRemainder, actualRemai

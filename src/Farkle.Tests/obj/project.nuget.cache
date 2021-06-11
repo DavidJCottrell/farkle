@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Y1ggxFBxhqzCUvGJx5j79Xqm9aAvCwxbGWnk5Hx5ajRvK2XCcdDuZRJinVmxWTAd2zABMTlgcBSvnwr4Fhdf3w==",
+  "dgSpecHash": "K2AIXSbexXJ7whs5AQ54DQZqx343XRhyO6QRU+7IohAWL0EU8VTufOAa9hOpxyTJkGsfkpgtUoAo0XvdH2GtTA==",
   "success": true,
   "projectFilePath": "/home/david/Farkle/src/Farkle.Tests/Farkle.Tests.fsproj",
   "expectedPackageFiles": [

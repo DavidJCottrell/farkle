@@ -31,9 +31,9 @@ let countOccurrences (diceToFind:Dice) (roll:DiceList) =
 // --- Standard Scoring Convention Logic ---
 let parseDice dice numOfSets numOfRemainders =
     match dice, numOfSets with
-    | 1, _ -> SetTotal (300 * numOfSets), RemainderTotal (100 * numOfRemainders)
-    | 5, _ -> SetTotal (500 * numOfSets), RemainderTotal (50 * numOfRemainders)
-    | _, _ when numOfSets > 0 ->  SetTotal ((dice * 100) * numOfSets), RemainderTotal 0 // Any dice other than 1 or 5 with at least one set
+    | 1, _ -> SetTotal (300), RemainderTotal (100 * numOfRemainders)
+    | 5, _ -> SetTotal (500), RemainderTotal (50 * numOfRemainders)
+    | _, _ when numOfSets > 0 ->  SetTotal ((dice * 100)), RemainderTotal 0 // Any dice other than 1 or 5 with at least one set
     | _, _ -> SetTotal 0, RemainderTotal 0
 
 

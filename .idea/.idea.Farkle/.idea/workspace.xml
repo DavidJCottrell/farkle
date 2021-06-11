@@ -6,26 +6,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e87e2b9-c844-4628-9ca9-0949e1cb20aa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/rider.project.restore.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FarkleApp/obj/rider.project.restore.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Library/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Farkle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Farkle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/Helpers.fs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/Helpers.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/Tests.fs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/Tests.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Farkle.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Farkle.Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Farkle.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Farkle.Tests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/FarkleApp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/FarkleApp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Library.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Library.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Library.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/bin/Debug/net5.0/Library.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.fsproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.fsproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.fsproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.fsproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/Debug/net5.0/Farkle.Tests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/obj/Farkle.Tests.fsproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/Farkle.Tests.fsproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/obj/Farkle.Tests.fsproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/Farkle.Tests.fsproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Farkle.Tests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farkle.Tests/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FarkleApp/bin/Debug/net5.0/FarkleApp" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/bin/Debug/net5.0/FarkleApp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FarkleApp/bin/Debug/net5.0/Library.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/bin/Debug/net5.0/Library.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FarkleApp/bin/Debug/net5.0/Library.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/bin/Debug/net5.0/Library.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FarkleApp/obj/Debug/net5.0/FarkleApp.fsproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/obj/Debug/net5.0/FarkleApp.fsproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FarkleApp/obj/Debug/net5.0/FarkleApp.fsproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/obj/Debug/net5.0/FarkleApp.fsproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FarkleApp/obj/Debug/net5.0/apphost" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/obj/Debug/net5.0/apphost" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FarkleApp/obj/FarkleApp.fsproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/obj/FarkleApp.fsproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FarkleApp/obj/FarkleApp.fsproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/obj/FarkleApp.fsproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FarkleApp/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FarkleApp/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FarkleApp/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/FarkleApp/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/ScoringLibrary.fs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/ScoringLibrary.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library/bin/Debug/net5.0/Library.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/bin/Debug/net5.0/Library.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library/bin/Debug/net5.0/Library.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/bin/Debug/net5.0/Library.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library/obj/Debug/net5.0/Library.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/obj/Debug/net5.0/Library.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library/obj/Debug/net5.0/Library.fsproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/obj/Debug/net5.0/Library.fsproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library/obj/Debug/net5.0/Library.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/obj/Debug/net5.0/Library.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/obj/Library.fsproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/obj/Library.fsproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/obj/Library.fsproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/obj/Library.fsproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +70,9 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/src/Farkle.Tests/Helpers.fs" />
       <option value="$PROJECT_DIR$/src/Library/GameLibrary.fs" />
+      <option value="$PROJECT_DIR$/src/Farkle.Tests/Helpers.fs" />
+      <option value="$PROJECT_DIR$/src/Library/ScoringLibrary.fs" />
       <option value="$PROJECT_DIR$/src/Farkle.Tests/Tests.fs" />
     </changedPaths>
   </component>
@@ -119,7 +142,12 @@
       <updated>1622469222258</updated>
       <workItem from="1622469231624" duration="14000" />
       <workItem from="1622469275012" duration="13705000" />
-      <workItem from="1622743426072" duration="2928000" />
+      <workItem from="1622743426072" duration="3049000" />
+      <workItem from="1622800299448" duration="2100000" />
+      <workItem from="1622975633411" duration="2177000" />
+      <workItem from="1623070948771" duration="5362000" />
+      <workItem from="1623321248939" duration="1436000" />
+      <workItem from="1623443105986" duration="4526000" />
     </task>
     <servers />
   </component>
