@@ -86,7 +86,7 @@ let chooseRollAgainScores (scoreList:ScoreResult list) =
     while not valid do
 
         printf "> "
-        let choices = System.Console.ReadLine().Split [|' '|] |> Array.toList // Unvalidated user input
+        let choices = System.Console.ReadLine().Split [|' '|] |> Array.toList
         
         // Choice validator function
         let validateScoreChoice (value:String) =

@@ -8,26 +8,6 @@ open System
 open ScoringLibrary
 open GameLibrary
 
-
-(*
-let generateRollWithOnlyOneRemainderCombination =
-    let rand = Random()
-    let mutable valid = false
-    let mutable randomDice = []
-    
-    while not valid do
-        randomDice <- [
-            Dice (rand.Next (1, 7))
-            Dice (rand.Next (1, 7))
-            Dice (rand.Next (1, 7))
-            Dice (rand.Next (1, 7))
-            Dice (rand.Next (1, 7))
-        ]
-        if countOccurrences diceForRemainder randomDice = 0 then valid <- true
-    Gen.shuffle [diceForRemainder; randomDice.[0]; randomDice.[1]; randomDice.[2]; randomDice.[3]; randomDice.[4]] |> Gen.sample 0 6
-
-*)
-
 let generateRollWithOneRemainderForDice (diceForRemainder:Dice) =
     let rand = Random()
     let mutable valid = false
@@ -47,23 +27,6 @@ let generateRollWithOneRemainderForDice (diceForRemainder:Dice) =
         if countOccurrences diceForRemainder randomDice = 0 && countOccurrences diceToExclude randomDice = 0 then
             valid <- true
     Gen.shuffle [diceForRemainder; randomDice.[0]; randomDice.[1]; randomDice.[2]; randomDice.[3]; randomDice.[4]] |> Gen.sample 0 6
-
-let generateRollWithTwoRemaindersForDice (diceForRemainder:Dice) =
-    let rand = Random()
-    let mutable valid = false
-    let mutable randomDice = []
-    
-    while not valid do
-        randomDice <- [
-            Dice (rand.Next (1, 7))
-            Dice (rand.Next (1, 7))
-            Dice (rand.Next (1, 7))
-            Dice (rand.Next (1, 7))
-        ]
-        if countOccurrences diceForRemainder randomDice = 0 then valid <- true
-    let diceList:DiceList = [diceForRemainder; randomDice.[0]; randomDice.[1]; randomDice.[2]; randomDice.[3]; diceForRemainder]
-    Gen.shuffle diceList
-    |> Gen.sample 0 6
     
 let generateRollWithOneSetForDice (diceForSet:Dice) =
     let rand = Random()

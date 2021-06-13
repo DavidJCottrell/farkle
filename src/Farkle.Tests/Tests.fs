@@ -32,6 +32,7 @@ let ``test that scoreRoll never produces more than (n - (n % 3)) / 3 sets`` () =
         |> ``A DiceList should never have more than (n - (n % 3)) / 3 sets``
     Check.Quick property
 
+
 [<Fact>]
 let ``test for correct SetCombination`` () =
     for i in [1..6] do
